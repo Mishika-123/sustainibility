@@ -1,0 +1,35 @@
+<xml xmlns="https://developers.google.com/blockly/xml"><variables><variable id="S*D-rx$.^voDaUlF%6DW">mySprite</variable><variable id="G3YV4c]JA;j3uHZnd~Q.">picture</variable><variable id="2ZC/c|AfVkA;0mCb1M.u">mySprite2</variable><variable id="(_ER91`?JgP(vXLP4:P9">projectile</variable><variable id="?$Le)QV,HzZrHWg5_l-K">tilemap</variable><variable type="KIND_SpriteKind" id="*(n/!{f[8;u`8N*BvTjG">Player</variable><variable type="KIND_SpriteKind" id="e6`-D-7E!*.1yDum![PP">Projectile</variable><variable type="KIND_SpriteKind" id="Q|45IC}{wNtJNH*Nv!=S">Food</variable><variable type="KIND_SpriteKind" id="nh[-pgXt.FbZKgI/:/]Z">Enemy</variable><variable type="KIND_SpriteKind" id="ylmjOw*H}?~(QdPuhMJq">npc</variable></variables><block type="pxt-on-start" id="6V`p^/Y!M}EVvQd$LaPz" x="0" y="0"><statement name="HANDLER"><block type="game_show_long_text" id="no?E/DSfTm#Ca~X]_E=`"><field name="layout">DialogLayout.Full</field><value name="str"><shadow type="text" id="Mp67K4L3Og3jL41?jBlM"><field name="TEXT">A new generation needs to be started in your world, a mysterious woman asks you to help</field></shadow></value><next><block type="game_show_long_text" id="Qkm|Al86rbQ_/:B)Qki]"><field name="layout">DialogLayout.Center</field><value name="str"><shadow type="text" id="(jA_a:v)fr!v?t1ay},,"><field name="TEXT">press (A) to help make the city a better place</field></shadow></value></block></next></block></statement></block><block type="keyonevent" id="Vr9g+Iyy:7R)NOVuQlCb" x="70" y="210"><field name="button">controller.A</field><field name="event">ControllerButtonEvent.Pressed</field><statement name="HANDLER"><block type="colorSetPalette" id="].CF,6T!;vDy0NI,XNPH"><field name="palette">color.Arcade</field><next><block type="gamesetbackgroundimage" id="3A)|P`L_(C#!JUU@wWji"><value name="img"><shadow type="background_image_picker" id="F@,=GsyW{Kya9@Chd3/+"><field name="img">assets.image`myImage0`</field><data>{"commentRefs":[],"fieldData":{"img":"myImages.image2"}}</data></shadow></value><next><block type="variables_set" id="6bg(F^:t#|d$Q4:2krJl"><field name="VAR" id="S*D-rx$.^voDaUlF%6DW">mySprite</field><value name="VALUE"><shadow xmlns="http://www.w3.org/1999/xhtml" type="math_number"><field name="NUM">0</field></shadow><block type="spritescreate" id="tngOV7{RENS)evB#/-lf"><value name="img"><shadow type="screen_image_picker" id="C+=([[EhkFd$4[zNkrV{"><field name="img">img`
+. . . . f f f f . . . . . 
+. . f f f f f f f f . . . 
+. f f f f f f c f f f . . 
+f f f f f f c c f f f c . 
+f f f c f f f f f f f c . 
+c c c f f f e e f f c c . 
+f f f f f e e f f c c f . 
+f f f b f e e f b f f f . 
+. f 4 1 f 4 4 f 1 4 f . . 
+. f e 4 4 4 4 4 4 e f . . 
+. f f f e e e e f f f . . 
+f e f b 7 7 7 7 b f e f . 
+e 4 f 7 7 7 7 7 7 f 4 e . 
+e e f 6 6 6 6 6 6 f e e . 
+. . . f f f f f f . . . . 
+. . . f f . . f f . . . . 
+`</field><data>{"commentRefs":[],"fieldData":{"img":"C+=([[EhkFd$4[zNkrV{"}}</data></shadow></value><value name="kind"><shadow type="spritekind" id="|Paeioo0xQp$$qS_Ml.6"><field name="MEMBER">Player</field></shadow></value></block></value><next><block type="game_control_sprite" id="$5mW(w||gCXq`^VO7l%t"><mutation xmlns="http://www.w3.org/1999/xhtml" _expanded="0" _input_init="true"></mutation><value name="sprite"><block type="variables_get" id="]hR%FT5)s@J{oHL;Ey`}"><field name="VAR" id="S*D-rx$.^voDaUlF%6DW">mySprite</field></block></value><value name="vx"><shadow type="spriteSpeedPicker" id="-+d7SdWzHSP~?[fOR(:f"><field name="speed">100</field></shadow></value><value name="vy"><shadow type="spriteSpeedPicker" id="}kcfHstueCY*=tN,bO}m"><field name="speed">100</field></shadow></value><next><block type="set_current_tilemap" id="FN}xJO{}}R~*$JxmrUNb"><value name="tilemap"><shadow type="tiles_tilemap_editor" id="-IvEx=M)Hanx0Wt0]8,$"><field name="tilemap">tilemap`level1`</field><data>{"commentRefs":[],"fieldData":{"tilemap":"level1"}}</data></shadow></value><next><block type="variables_set" id="+.fwCGiFQo{FMNq-D#RH"><field name="VAR" id="2ZC/c|AfVkA;0mCb1M.u">mySprite2</field><value name="VALUE"><shadow type="math_number"><field name="NUM">0</field></shadow><block type="spritescreate" id="z!v;gHdhbEsU.s)Ycm}U"><value name="img"><shadow type="screen_image_picker" id="`/!N-.+wWUx){.azP{)c"><field name="img">img`
+. . . . . f f 4 4 f f . . . . . 
+. . . . f 5 4 5 5 4 5 f . . . . 
+. . . f e 4 5 5 5 5 4 e f . . . 
+. . f b 3 e 4 4 4 4 e 3 b f . . 
+. . f 3 3 3 3 3 3 3 3 3 3 f . . 
+. f 3 3 e b 3 e e 3 b e 3 3 f . 
+. f 3 3 f f e e e e f f 3 3 f . 
+. f b b f b f e e f b f b b f . 
+. f b b e 1 f 4 4 f 1 e b b f . 
+f f b b f 4 4 4 4 4 4 f b b f f 
+f b b f f f e e e e f f f b b f 
+. f e e f b d d d d b f e e f . 
+. . e 4 c d d d d d d c 4 e . . 
+. . e f b d b d b d b b f e . . 
+. . . f f 1 d 1 d 1 d f f . . . 
+. . . . . f f b b f f . . . . . 
+`</field><data>{"commentRefs":[],"fieldData":{"img":"`/!N-.+wWUx){.azP{)c"}}</data></shadow></value><value name="kind"><shadow type="spritekind" id="*D/zcV}ASjbJJ1TR-n/|"><field name="MEMBER">npc</field></shadow></value></block></value><next><block type="game_control_sprite" id="xBp+H-S/!9-}^Bk*$RtJ"><mutation xmlns="http://www.w3.org/1999/xhtml" _expanded="2" _input_init="true"></mutation><value name="sprite"><block type="variables_get" id="lOYZFOO|%ea?pa#(0z?["><field name="VAR" id="S*D-rx$.^voDaUlF%6DW">mySprite</field></block></value><value name="vx"><shadow type="spriteSpeedPicker" id="`)_jv+ObMR[$lB@9{r`("><field name="speed">100</field></shadow></value><value name="vy"><shadow type="spriteSpeedPicker" id="D|JsCwqZ8TF)VV/1[U]!"><field name="speed">100</field></shadow></value></block></next></block></next></block></next></block></next></block></next></block></next></block></statement></block></xml>
